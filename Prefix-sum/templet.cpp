@@ -123,3 +123,33 @@ public:
  return index;
  }
 };
+
+//1480. Running Sum of 1d Array
+
+class Solution {
+public:
+
+// Ya to:
+
+// resize() + ans[i] = ...
+// Ya phir:
+
+// sirf push_back()
+
+Dono ek saath kabhi mat use karo.
+    vector<int> runningSum(vector<int>& nums) {
+        int n = nums.size();
+        vector<int>ans(n);
+        if(n==0) return ans;
+        ans[0]=nums[0];
+    
+//base case
+
+        for(int i=1;i<n;i++){
+            ans[i] = ans[i - 1] + nums[i];
+
+            
+        }
+        return ans;
+    }
+};
